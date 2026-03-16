@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "F001",
+    "name": "Superaquecimento de Motor",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Temperatura acima do limite operacional",
+      "Cheiro de queimado",
+      "Desligamento automático por proteção térmica",
+      "Ruído anormal no motor"
+    ],
+    "probable_causes": [
+      "Sobrecarga de operação",
+      "Falha no sistema de resfriamento",
+      "Ventilação bloqueada",
+      "Rolamento com desgaste"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar a máquina imediatamente e aguardar resfriamento.",
+      "corrective_action": "Verificar e limpar sistema de ventilação, inspecionar rolamentos, checar corrente elétrica de operação.",
+      "preventive_action": "Realizar limpeza periódica das grades de ventilação e monitoramento de temperatura via sensor.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": false
+    },
+    "related_failures": ["F004", "F007", "F019"],
+    "avg_recurrence_days": 90,
+    "documentation_ref": "MAN-EL-012"
+  },
+  {
+    "id": "F002",
+    "name": "Vazamento Hidráulico",
+    "category": "Hidráulica",
+    "severity": "Média",
+    "symptoms": [
+      "Mancha de óleo no chão ou na máquina",
+      "Queda de pressão no sistema",
+      "Atuadores lentos ou sem resposta",
+      "Nível de óleo no reservatório abaixo do mínimo"
+    ],
+    "probable_causes": [
+      "Desgaste de vedações e retentores",
+      "Conexões frouxas ou danificadas",
+      "Mangueira trincada ou rompida",
+      "Sobre pressão no circuito"
+    ],
+    "resolution": {
+      "immediate_action": "Isolar o circuito hidráulico e conter o vazamento com absorvente.",
+      "corrective_action": "Identificar ponto de vazamento, substituir vedações, mangueiras ou conexões danificadas.",
+      "preventive_action": "Inspeção visual periódica de mangueiras e conexões, troca programada de retentores.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F008", "F020"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-HID-007"
+  },
+  {
+    "id": "F003",
+    "name": "Falha no Inversor de Frequência",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Código de erro exibido no display do inversor",
+      "Motor não parte ou para bruscamente",
+      "Velocidade inconsistente",
+      "Alarme sonoro ou luminoso ativo"
+    ],
+    "probable_causes": [
+      "Sobretensão ou subtensão na alimentação",
+      "Sobrecarga no motor",
+      "Superaquecimento do inversor",
+      "Falha de comunicação com CLP"
+    ],
+    "resolution": {
+      "immediate_action": "Registrar código de erro, desligar e religar o inversor após 30 segundos.",
+      "corrective_action": "Consultar manual do fabricante para o código de erro, verificar tensão de alimentação, checar fiação de controle.",
+      "preventive_action": "Limpeza periódica do inversor, monitoramento da tensão de rede, calibração de parâmetros.",
+      "estimated_downtime_hours": 4,
+      "requires_specialist": true
+    },
+    "related_failures": ["F001", "F006"],
+    "avg_recurrence_days": 365,
+    "documentation_ref": "MAN-EL-031"
+  },
+  {
+    "id": "F004",
+    "name": "Desgaste de Rolamento",
+    "category": "Mecânica",
+    "severity": "Média",
+    "symptoms": [
+      "Ruído metálico ou vibração anormal",
+      "Temperatura elevada na região do mancal",
+      "Folga perceptível no eixo",
+      "Vibração detectada por sensor"
+    ],
+    "probable_causes": [
+      "Falta de lubrificação",
+      "Contaminação por poeira ou umidade",
+      "Sobrecarga radial ou axial",
+      "Fim de vida útil do componente"
+    ],
+    "resolution": {
+      "immediate_action": "Reduzir carga operacional e monitorar temperatura.",
+      "corrective_action": "Substituir rolamento e inspecionar eixo e alojamento.",
+      "preventive_action": "Lubrificação conforme plano de manutenção, análise de vibração periódica.",
+      "estimated_downtime_hours": 5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F001", "F011"],
+    "avg_recurrence_days": 270,
+    "documentation_ref": "MAN-MEC-009"
+  },
+  {
+    "id": "F005",
+    "name": "Falha no Sensor de Posição",
+    "category": "Instrumentação",
+    "severity": "Alta",
+    "symptoms": [
+      "Leitura incorreta ou ausente no CLP",
+      "Alarme de posição indefinida",
+      "Parada inesperada do ciclo automático",
+      "Sinal instável ou com ruído"
+    ],
+    "probable_causes": [
+      "Sensor desalinhado ou danificado fisicamente",
+      "Falha no cabo ou conector",
+      "Interferência eletromagnética",
+      "Tensão de alimentação fora do especificado"
+    ],
+    "resolution": {
+      "immediate_action": "Colocar equipamento em modo manual e verificar sinal do sensor no CLP.",
+      "corrective_action": "Realinhar ou substituir sensor, verificar cabeamento e blindagem.",
+      "preventive_action": "Proteção física dos sensores, inspeção periódica de conectores.",
+      "estimated_downtime_hours": 1.5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F006", "F025"],
+    "avg_recurrence_days": 120,
+    "documentation_ref": "MAN-INST-004"
+  },
+  {
+    "id": "F006",
+    "name": "Falha de Comunicação CLP",
+    "category": "Automação",
+    "severity": "Crítica",
+    "symptoms": [
+      "Perda de comunicação na rede industrial",
+      "Timeout em comandos remotos",
+      "Equipamentos saindo do modo automático",
+      "Erro de rede no SCADA"
+    ],
+    "probable_causes": [
+      "Cabo de rede danificado ou mal conectado",
+      "IP duplicado na rede",
+      "Falha no switch industrial",
+      "Firmware desatualizado do CLP"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar LEDs de status do CLP e do switch, isolar segmento de rede afetado.",
+      "corrective_action": "Substituir cabo ou switch, corrigir conflito de IP, reiniciar módulo de comunicação.",
+      "preventive_action": "Documentar topologia de rede, manter backup de configuração do CLP, monitoramento de rede.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": true
+    },
+    "related_failures": ["F003", "F005"],
+    "avg_recurrence_days": 200,
+    "documentation_ref": "MAN-AUT-018"
+  },
+  {
+    "id": "F007",
+    "name": "Quebra de Correia ou Corrente",
+    "category": "Mecânica",
+    "severity": "Alta",
+    "symptoms": [
+      "Parada súbita da transmissão",
+      "Ruído de estouro ou tranco",
+      "Motor girando sem movimentar o acionado",
+      "Correia ou corrente visivelmente partida"
+    ],
+    "probable_causes": [
+      "Tensão incorreta na correia",
+      "Desalinhamento de polias ou engrenagens",
+      "Sobrecarga pontual",
+      "Fim de vida útil"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar máquina e sinalizar área.",
+      "corrective_action": "Substituir correia ou corrente, verificar alinhamento e tensão correta.",
+      "preventive_action": "Inspeção visual periódica, substituição preventiva por horas de operação.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F004", "F011"],
+    "avg_recurrence_days": 300,
+    "documentation_ref": "MAN-MEC-015"
+  },
+  {
+    "id": "F008",
+    "name": "Falha na Bomba Hidráulica",
+    "category": "Hidráulica",
+    "severity": "Alta",
+    "symptoms": [
+      "Ausência de pressão no sistema",
+      "Ruído excessivo na bomba",
+      "Óleo com espuma no reservatório",
+      "Temperatura do óleo acima do normal"
+    ],
+    "probable_causes": [
+      "Cavitação por filtro entupido",
+      "Desgaste interno das peças",
+      "Nível de óleo baixo",
+      "Acoplamento danificado"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar sistema hidráulico e verificar nível de óleo.",
+      "corrective_action": "Trocar filtro, verificar acoplamento, realizar teste de pressão. Substituir bomba se necessário.",
+      "preventive_action": "Troca periódica de filtros, análise de óleo hidráulico, monitoramento de pressão.",
+      "estimated_downtime_hours": 6,
+      "requires_specialist": true
+    },
+    "related_failures": ["F002", "F020"],
+    "avg_recurrence_days": 400,
+    "documentation_ref": "MAN-HID-011"
+  },
+  {
+    "id": "F009",
+    "name": "Curto-Circuito no Painel Elétrico",
+    "category": "Elétrica",
+    "severity": "Crítica",
+    "symptoms": [
+      "Disjuntor disparando repetidamente",
+      "Fumaça ou cheiro forte de queimado no painel",
+      "Queda total de energia no equipamento",
+      "Fusível queimado visível"
+    ],
+    "probable_causes": [
+      "Isolamento de cabo danificado",
+      "Umidade ou contaminação no painel",
+      "Conexão frouxa com arco elétrico",
+      "Sobrecarga prolongada"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar chave geral imediatamente. Não religionar sem inspeção.",
+      "corrective_action": "Inspecionar todos os cabos e conexões, substituir componentes queimados, testar isolamento.",
+      "preventive_action": "Termografia semestral no painel, vedação contra umidade, organização de cabeamento.",
+      "estimated_downtime_hours": 8,
+      "requires_specialist": true
+    },
+    "related_failures": ["F003", "F017"],
+    "avg_recurrence_days": 500,
+    "documentation_ref": "MAN-EL-045"
+  },
+  {
+    "id": "F010",
+    "name": "Contaminação do Óleo Hidráulico",
+    "category": "Hidráulica",
+    "severity": "Média",
+    "symptoms": [
+      "Óleo com coloração escura ou leitosa",
+      "Filtros entupindo com frequência acima do normal",
+      "Desgaste acelerado de componentes",
+      "Temperatura do óleo acima do setpoint"
+    ],
+    "probable_causes": [
+      "Entrada de água por condensação ou falha de vedação",
+      "Troca de óleo fora do prazo",
+      "Partículas metálicas de desgaste interno",
+      "Incompatibilidade de fluido"
+    ],
+    "resolution": {
+      "immediate_action": "Coletar amostra de óleo para análise laboratorial.",
+      "corrective_action": "Drenar e limpar reservatório, substituir óleo e filtros, identificar fonte de contaminação.",
+      "preventive_action": "Análise de óleo semestral, troca programada conforme horas de operação.",
+      "estimated_downtime_hours": 4,
+      "requires_specialist": false
+    },
+    "related_failures": ["F002", "F008"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-HID-019"
+  },
+  {
+    "id": "F011",
+    "name": "Desalinhamento de Eixo",
+    "category": "Mecânica",
+    "severity": "Média",
+    "symptoms": [
+      "Vibração excessiva em toda a máquina",
+      "Desgaste irregular no acoplamento",
+      "Aquecimento do mancal",
+      "Ruído cíclico proporcional à rotação"
+    ],
+    "probable_causes": [
+      "Deslocamento da base após impacto",
+      "Desgaste do acoplamento flexível",
+      "Afrouxamento de parafusos de fixação",
+      "Dilatação térmica não compensada"
+    ],
+    "resolution": {
+      "immediate_action": "Reduzir velocidade operacional e monitorar vibração.",
+      "corrective_action": "Realizar alinhamento a laser de precisão, substituir acoplamento se necessário.",
+      "preventive_action": "Alinhamento semestral, monitoramento de vibração contínuo.",
+      "estimated_downtime_hours": 4,
+      "requires_specialist": false
+    },
+    "related_failures": ["F004", "F007"],
+    "avg_recurrence_days": 240,
+    "documentation_ref": "MAN-MEC-022"
+  },
+  {
+    "id": "F012",
+    "name": "Falha no Sistema de Lubrificação Centralizada",
+    "category": "Mecânica",
+    "severity": "Alta",
+    "symptoms": [
+      "Alarme de falta de lubrificação",
+      "Pontos lubrificados secos ou sem graxa",
+      "Aquecimento de mancais e guias",
+      "Bomba de graxa funcionando sem distribuição"
+    ],
+    "probable_causes": [
+      "Reservatório de graxa vazio",
+      "Tubulação entupida ou partida",
+      "Falha na bomba dosadora",
+      "Distribuidor travado"
+    ],
+    "resolution": {
+      "immediate_action": "Lubrificar manualmente os pontos críticos para permitir operação temporária.",
+      "corrective_action": "Reabastecer reservatório, verificar e desbloquear tubulação, substituir bomba ou distribuidor defeituoso.",
+      "preventive_action": "Verificação semanal do nível de graxa, limpeza periódica dos distribuidores.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": false
+    },
+    "related_failures": ["F004", "F011"],
+    "avg_recurrence_days": 150,
+    "documentation_ref": "MAN-MEC-030"
+  },
+  {
+    "id": "F013",
+    "name": "Falha no Encoder Rotativo",
+    "category": "Instrumentação",
+    "severity": "Alta",
+    "symptoms": [
+      "Erro de posição no servo drive",
+      "Movimento errático do eixo controlado",
+      "Alarme de perda de referência",
+      "Contagem de pulsos inconsistente"
+    ],
+    "probable_causes": [
+      "Encoder danificado por impacto",
+      "Cabo do encoder com falha intermitente",
+      "Contaminação no disco óptico",
+      "Acoplamento mecânico do encoder frouxo"
+    ],
+    "resolution": {
+      "immediate_action": "Desabilitar eixo afetado e colocar em modo manual.",
+      "corrective_action": "Substituir encoder, verificar cabeamento blindado, referenciar posição zero.",
+      "preventive_action": "Proteção do encoder contra vibrações e contaminação, inspeção semestral.",
+      "estimated_downtime_hours": 2.5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F005", "F024"],
+    "avg_recurrence_days": 210,
+    "documentation_ref": "MAN-INST-011"
+  },
+  {
+    "id": "F014",
+    "name": "Superaquecimento do Quadro de Comando",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Temperatura interna do painel acima de 45°C",
+      "Desarme de componentes por proteção térmica",
+      "Ar quente saindo pelas frestas do painel",
+      "Falhas intermitentes em componentes eletrônicos"
+    ],
+    "probable_causes": [
+      "Falha no sistema de ventilação do painel",
+      "Filtro de ar entupido",
+      "Ar condicionado do painel com defeito",
+      "Carga elétrica acima do projeto"
+    ],
+    "resolution": {
+      "immediate_action": "Abrir painel e ventilar manualmente, reduzir carga se possível.",
+      "corrective_action": "Substituir ventiladores ou ar condicionado do painel, limpar filtros.",
+      "preventive_action": "Limpeza mensal dos filtros, monitoramento contínuo de temperatura interna.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F003", "F009"],
+    "avg_recurrence_days": 120,
+    "documentation_ref": "MAN-EL-050"
+  },
+  {
+    "id": "F015",
+    "name": "Falha na Válvula Pneumática",
+    "category": "Pneumática",
+    "severity": "Média",
+    "symptoms": [
+      "Atuador sem resposta ao comando",
+      "Vazamento de ar audível na válvula",
+      "Movimento incompleto do cilindro",
+      "Pressão de linha abaixo do especificado"
+    ],
+    "probable_causes": [
+      "Bobina da válvula queimada",
+      "Contaminação interna por água ou óleo",
+      "Desgaste do carretel",
+      "Mola de retorno quebrada"
+    ],
+    "resolution": {
+      "immediate_action": "Isolar circuito pneumático e verificar se falha é elétrica ou mecânica.",
+      "corrective_action": "Substituir bobina ou válvula completa conforme diagnóstico.",
+      "preventive_action": "Instalação e manutenção de filtro-regulador-lubrificador (FRL), drenagem periódica.",
+      "estimated_downtime_hours": 1.5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F016", "F022"],
+    "avg_recurrence_days": 200,
+    "documentation_ref": "MAN-PNE-008"
+  },
+  {
+    "id": "F016",
+    "name": "Vazamento de Ar Comprimido",
+    "category": "Pneumática",
+    "severity": "Baixa",
+    "symptoms": [
+      "Compressor ligando com frequência excessiva",
+      "Queda de pressão na rede pneumática",
+      "Ruído de vazamento audível",
+      "Consumo de energia do compressor aumentado"
+    ],
+    "probable_causes": [
+      "Conexões soltas ou danificadas",
+      "Mangueiras trincadas",
+      "Vedações desgastadas nos cilindros",
+      "Válvulas de retenção com folga"
+    ],
+    "resolution": {
+      "immediate_action": "Usar detector de ultrassom ou água com sabão para localizar vazamento.",
+      "corrective_action": "Apertar conexões, substituir mangueiras ou vedações danificadas.",
+      "preventive_action": "Inspeção mensal com detector de ultrassom, substituição preventiva de mangueiras.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": false
+    },
+    "related_failures": ["F015"],
+    "avg_recurrence_days": 90,
+    "documentation_ref": "MAN-PNE-003"
+  },
+  {
+    "id": "F017",
+    "name": "Falha no No-break / UPS",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Alarme de bateria fraca ou falha",
+      "Equipamentos sensíveis reiniciando em queda de energia",
+      "LED de falha ativo no no-break",
+      "Autonomia menor que o esperado"
+    ],
+    "probable_causes": [
+      "Baterias com vida útil esgotada",
+      "Sobrecarga no no-break",
+      "Falha no carregador interno",
+      "Temperatura ambiente muito elevada"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar carga conectada e reduzir se em sobrecarga.",
+      "corrective_action": "Substituir baterias ou módulo de no-break conforme diagnóstico.",
+      "preventive_action": "Substituição preventiva de baterias a cada 3 anos, monitoramento de temperatura.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F006", "F009"],
+    "avg_recurrence_days": 1095,
+    "documentation_ref": "MAN-EL-060"
+  },
+  {
+    "id": "F018",
+    "name": "Falha no Sistema de Resfriamento a Água",
+    "category": "Utilidades",
+    "severity": "Alta",
+    "symptoms": [
+      "Temperatura do processo acima do limite",
+      "Fluxo de água abaixo do mínimo",
+      "Alarme de alta temperatura em componente refrigerado",
+      "Água com vazão irregular ou zerada"
+    ],
+    "probable_causes": [
+      "Entupimento no trocador de calor",
+      "Falha na bomba de circulação",
+      "Válvula de controle travada",
+      "Incrustação por falta de tratamento de água"
+    ],
+    "resolution": {
+      "immediate_action": "Ativar resfriamento alternativo e reduzir carga do processo.",
+      "corrective_action": "Limpar ou substituir trocador de calor, verificar bomba e válvulas.",
+      "preventive_action": "Tratamento de água periódico, limpeza semestral do trocador.",
+      "estimated_downtime_hours": 5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F001", "F010"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-UTL-014"
+  },
+  {
+    "id": "F019",
+    "name": "Bobina de Motor Queimada",
+    "category": "Elétrica",
+    "severity": "Crítica",
+    "symptoms": [
+      "Motor não parte mesmo com alimentação correta",
+      "Cheiro forte de verniz queimado",
+      "Corrente muito baixa ou ausente em uma fase",
+      "Resistência entre fases desequilibrada no multímetro"
+    ],
+    "probable_causes": [
+      "Operação prolongada em sobrecarga",
+      "Relé de sobrecarga mal ajustado",
+      "Partidas excessivas em curto período",
+      "Umidade comprometendo isolamento"
+    ],
+    "resolution": {
+      "immediate_action": "Isolar motor elétrico e sinalizar para substituição.",
+      "corrective_action": "Substituir motor ou enviar para rebobinamento. Verificar proteções antes de religar.",
+      "preventive_action": "Ajuste correto do relé de sobrecarga, monitoramento de corrente, controle de partidas/hora.",
+      "estimated_downtime_hours": 12,
+      "requires_specialist": true
+    },
+    "related_failures": ["F001", "F003"],
+    "avg_recurrence_days": 730,
+    "documentation_ref": "MAN-EL-070"
+  },
+  {
+    "id": "F020",
+    "name": "Falha na Válvula Hidráulica Direcional",
+    "category": "Hidráulica",
+    "severity": "Alta",
+    "symptoms": [
+      "Cilindro não responde ao comando",
+      "Movimento em direção errada",
+      "Pressão elevada sem movimentação",
+      "Válvula aquecendo excessivamente"
+    ],
+    "probable_causes": [
+      "Bobina solenóide queimada",
+      "Carretel travado por contaminação",
+      "Mola de centramento quebrada",
+      "Tensão de comando incorreta"
+    ],
+    "resolution": {
+      "immediate_action": "Acionar manualmente a válvula para verificar se a falha é elétrica ou mecânica.",
+      "corrective_action": "Substituir solenóide ou válvula completa, filtrar óleo se contaminado.",
+      "preventive_action": "Manutenção do sistema de filtragem, inspeção periódica das bobinas.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F002", "F008"],
+    "avg_recurrence_days": 300,
+    "documentation_ref": "MAN-HID-025"
+  },
+  {
+    "id": "F021",
+    "name": "Falha no Servo Drive",
+    "category": "Automação",
+    "severity": "Alta",
+    "symptoms": [
+      "Alarme de seguimento de posição no drive",
+      "Eixo servo oscilando ou travado",
+      "Código de erro no display do servo",
+      "Corrente de pico acima do limite"
+    ],
+    "probable_causes": [
+      "Parâmetros de ganho mal ajustados",
+      "Encoder com falha",
+      "Sobrecarga mecânica no eixo",
+      "Superaquecimento do drive"
+    ],
+    "resolution": {
+      "immediate_action": "Desabilitar eixo e verificar condições mecânicas antes de habilitar novamente.",
+      "corrective_action": "Verificar e ajustar parâmetros do servo, substituir encoder se necessário.",
+      "preventive_action": "Autotuning periódico, monitoramento de temperatura do drive.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": true
+    },
+    "related_failures": ["F013", "F006"],
+    "avg_recurrence_days": 250,
+    "documentation_ref": "MAN-AUT-030"
+  },
+  {
+    "id": "F022",
+    "name": "Falha no Cilindro Pneumático",
+    "category": "Pneumática",
+    "severity": "Média",
+    "symptoms": [
+      "Movimento lento ou incompleto do cilindro",
+      "Vazamento de ar pelo vedador da haste",
+      "Força de avanço insuficiente",
+      "Haste do cilindro com riscos visíveis"
+    ],
+    "probable_causes": [
+      "Desgaste do vedador interno",
+      "Contaminação no interior do cilindro",
+      "Pressão de operação insuficiente",
+      "Carga lateral na haste"
+    ],
+    "resolution": {
+      "immediate_action": "Reduzir ciclos e monitorar funcionamento.",
+      "corrective_action": "Substituir kit de vedação ou cilindro completo se haste riscada.",
+      "preventive_action": "Lubrificação do ar (FRL), proteção da haste contra impactos e contaminantes.",
+      "estimated_downtime_hours": 1.5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F015", "F016"],
+    "avg_recurrence_days": 365,
+    "documentation_ref": "MAN-PNE-015"
+  },
+  {
+    "id": "F023",
+    "name": "Falha na Célula de Carga / Transdutor de Força",
+    "category": "Instrumentação",
+    "severity": "Alta",
+    "symptoms": [
+      "Leitura de força zerada ou fora do esperado",
+      "Oscilação de sinal sem carga aplicada",
+      "Erro de calibração no sistema",
+      "Offset permanente na medição"
+    ],
+    "probable_causes": [
+      "Sobrecarga mecânica acima da capacidade nominal",
+      "Impacto físico no sensor",
+      "Degradação dos strain gauges por umidade",
+      "Cabo de sinal com interferência"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar zero da célula sem carga aplicada.",
+      "corrective_action": "Recalibrar ou substituir célula de carga, verificar cabeamento blindado.",
+      "preventive_action": "Proteção contra sobrecarga, calibração semestral, vedação contra umidade.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": true
+    },
+    "related_failures": ["F005", "F013"],
+    "avg_recurrence_days": 400,
+    "documentation_ref": "MAN-INST-020"
+  },
+  {
+    "id": "F024",
+    "name": "Falha no Servo Motor",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Alarme de sobrecorrente no drive",
+      "Motor não atinge posição programada",
+      "Temperatura anormal no servo motor",
+      "Barulho de atrito interno no motor"
+    ],
+    "probable_causes": [
+      "Desgaste dos rolamentos do servo",
+      "Bobina com falha de isolamento",
+      "Encoder integrado defeituoso",
+      "Contaminação interna por umidade"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar eixo e inspecionar termicamente o motor.",
+      "corrective_action": "Substituir servo motor, verificar se drive está dentro dos limites.",
+      "preventive_action": "Monitoramento de temperatura e corrente, limpeza e inspeção semestral.",
+      "estimated_downtime_hours": 6,
+      "requires_specialist": true
+    },
+    "related_failures": ["F021", "F013"],
+    "avg_recurrence_days": 600,
+    "documentation_ref": "MAN-EL-080"
+  },
+  {
+    "id": "F025",
+    "name": "Falha no Sensor de Temperatura (PT100/Termopar)",
+    "category": "Instrumentação",
+    "severity": "Média",
+    "symptoms": [
+      "Leitura de temperatura fixa ou absurda",
+      "Alarme de sensor aberto ou em curto",
+      "Valor de temperatura não acompanha processo",
+      "Leitura oscilando sem variação real"
+    ],
+    "probable_causes": [
+      "Fio do sensor partido internamente",
+      "Contato oxidado no conector",
+      "Sensor fora do local de medição",
+      "Módulo de leitura com defeito"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar leitura em outro canal de entrada para isolar falha.",
+      "corrective_action": "Substituir sensor ou conector, verificar módulo de aquisição.",
+      "preventive_action": "Inspeção de conectores semestralmente, proteção do sensor contra impactos.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": false
+    },
+    "related_failures": ["F005", "F018"],
+    "avg_recurrence_days": 300,
+    "documentation_ref": "MAN-INST-025"
+  },
+  {
+    "id": "F026",
+    "name": "Travamento de Guia Linear",
+    "category": "Mecânica",
+    "severity": "Média",
+    "symptoms": [
+      "Movimento do carro com resistência ou parado",
+      "Ruído de arrasto nas guias",
+      "Folga lateral perceptível no conjunto",
+      "Marcas de desgaste visíveis na guia"
+    ],
+    "probable_causes": [
+      "Falta de lubrificação nas guias",
+      "Contaminação por cavacos ou poeira abrasiva",
+      "Desgaste prematuro por sobrecarga",
+      "Aperto excessivo do pré-carga do carro"
+    ],
+    "resolution": {
+      "immediate_action": "Lubrificar manualmente as guias e verificar se movimento normaliza.",
+      "corrective_action": "Limpar e lubrificar guias, substituir carro ou guia se com desgaste excessivo.",
+      "preventive_action": "Lubrificação automática periódica, raspadores de proteção nas guias.",
+      "estimated_downtime_hours": 4,
+      "requires_specialist": false
+    },
+    "related_failures": ["F012", "F011"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-MEC-040"
+  },
+  {
+    "id": "F027",
+    "name": "Falha no Fuso de Esferas (Ball Screw)",
+    "category": "Mecânica",
+    "severity": "Alta",
+    "symptoms": [
+      "Folga no avanço do eixo",
+      "Ruído de crepitação durante movimento",
+      "Erro de posicionamento crescente",
+      "Vibração ao inverter sentido de movimento"
+    ],
+    "probable_causes": [
+      "Desgaste das esferas por falta de lubrificação",
+      "Contaminação no mecanismo de recirculação",
+      "Sobrecarga axial acima do limite",
+      "Fim de vida útil por ciclos"
+    ],
+    "resolution": {
+      "immediate_action": "Reduzir avanço rápido e monitorar erro de posição.",
+      "corrective_action": "Substituir conjunto fuso de esferas e porca, realinhar montagem.",
+      "preventive_action": "Lubrificação automática, proteção com sanfona, controle de horas de operação.",
+      "estimated_downtime_hours": 8,
+      "requires_specialist": true
+    },
+    "related_failures": ["F026", "F013"],
+    "avg_recurrence_days": 720,
+    "documentation_ref": "MAN-MEC-048"
+  },
+  {
+    "id": "F028",
+    "name": "Falha no Acumulador Hidráulico",
+    "category": "Hidráulica",
+    "severity": "Média",
+    "symptoms": [
+      "Pressão hidráulica com variação brusca",
+      "Sistema sem reserva de energia para movimentos rápidos",
+      "Alarme de pré-carga de nitrogênio baixa",
+      "Bomba trabalhando continuamente sem pausa"
+    ],
+    "probable_causes": [
+      "Perda de carga de nitrogênio",
+      "Membrana interna rompida",
+      "Válvula de carregamento com defeito",
+      "Temperatura elevada degradando membrana"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar pressão de pré-carga com manômetro de nitrogênio.",
+      "corrective_action": "Recarregar nitrogênio ou substituir membrana/acumulador completo.",
+      "preventive_action": "Verificação semestral da pré-carga de nitrogênio.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F002", "F008"],
+    "avg_recurrence_days": 365,
+    "documentation_ref": "MAN-HID-030"
+  },
+  {
+    "id": "F029",
+    "name": "Falha no Sistema de Visão Industrial",
+    "category": "Automação",
+    "severity": "Alta",
+    "symptoms": [
+      "Taxa de rejeição anormal na inspeção",
+      "Erro de calibração da câmera",
+      "Imagem borrada ou com artefatos",
+      "Sistema não detectando peças na posição correta"
+    ],
+    "probable_causes": [
+      "Lente da câmera suja ou embaçada",
+      "Variação de iluminação no ambiente",
+      "Câmera desalinhada do campo de visão",
+      "Parâmetros de inspeção desatualizados"
+    ],
+    "resolution": {
+      "immediate_action": "Limpar lente e verificar iluminação da estação de inspeção.",
+      "corrective_action": "Recalibrar sistema de visão, atualizar parâmetros de inspeção, verificar câmera.",
+      "preventive_action": "Limpeza semanal da lente, proteção contra poeira, recalibração mensal.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": true
+    },
+    "related_failures": ["F005", "F006"],
+    "avg_recurrence_days": 90,
+    "documentation_ref": "MAN-AUT-040"
+  },
+  {
+    "id": "F030",
+    "name": "Falha no Compressor de Ar",
+    "category": "Utilidades",
+    "severity": "Crítica",
+    "symptoms": [
+      "Pressão da rede pneumática caindo progressivamente",
+      "Compressor com temperatura muito elevada",
+      "Óleo no ar comprimido da rede",
+      "Ruído de batimento no compressor"
+    ],
+    "probable_causes": [
+      "Válvulas de sucção ou descarga com defeito",
+      "Filtro de ar entupido",
+      "Nível de óleo baixo no compressor",
+      "Anel de pistão desgastado"
+    ],
+    "resolution": {
+      "immediate_action": "Ativar compressor reserva se disponível.",
+      "corrective_action": "Substituir válvulas, filtros, ou realizar revisão geral do compressor.",
+      "preventive_action": "Manutenção preventiva semestral, troca de óleo e filtros conforme fabricante.",
+      "estimated_downtime_hours": 10,
+      "requires_specialist": true
+    },
+    "related_failures": ["F015", "F016"],
+    "avg_recurrence_days": 300,
+    "documentation_ref": "MAN-UTL-020"
+  },
+  {
+    "id": "F031",
+    "name": "Falha no Redutor / Caixa de Engrenagens",
+    "category": "Mecânica",
+    "severity": "Alta",
+    "symptoms": [
+      "Ruído de engrenamento anormal",
+      "Óleo vazando pelo respirador",
+      "Temperatura elevada no corpo do redutor",
+      "Folga excessiva no eixo de saída"
+    ],
+    "probable_causes": [
+      "Nível de óleo inadequado",
+      "Desgaste de engrenagens por sobrecarga",
+      "Rolamento de suporte com falha",
+      "Vedação com desgaste"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar nível de óleo e temperatura.",
+      "corrective_action": "Drenar, inspecionar internamente, substituir peças danificadas ou o redutor completo.",
+      "preventive_action": "Troca de óleo conforme programação, análise de vibração semestral.",
+      "estimated_downtime_hours": 8,
+      "requires_specialist": true
+    },
+    "related_failures": ["F004", "F011"],
+    "avg_recurrence_days": 540,
+    "documentation_ref": "MAN-MEC-055"
+  },
+  {
+    "id": "F032",
+    "name": "Falha no Freio Eletromagnético",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Eixo não trava ao desligar motor",
+      "Motor com dificuldade para partir (freio preso)",
+      "Superaquecimento do motor com carga nominal",
+      "Barulho de atrito com motor em funcionamento"
+    ],
+    "probable_causes": [
+      "Bobina do freio queimada",
+      "Folga de ajuste do freio incorreta",
+      "Disco de freio desgastado",
+      "Tensão de alimentação do freio incorreta"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar se freio está acionando com tensão correta.",
+      "corrective_action": "Substituir bobina ou disco de freio, ajustar folga conforme especificação.",
+      "preventive_action": "Inspeção semestral do desgaste do disco, medição de folga e corrente da bobina.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": false
+    },
+    "related_failures": ["F001", "F019"],
+    "avg_recurrence_days": 450,
+    "documentation_ref": "MAN-EL-090"
+  },
+  {
+    "id": "F033",
+    "name": "Falha na IHM / Painel de Operação",
+    "category": "Automação",
+    "severity": "Média",
+    "symptoms": [
+      "Tela da IHM sem imagem ou com manchas",
+      "Toque não respondendo corretamente",
+      "IHM reiniciando sozinha",
+      "Perda de configuração e receitas salvas"
+    ],
+    "probable_causes": [
+      "Tela com desgaste por uso excessivo",
+      "Superaquecimento da IHM no painel",
+      "Falha na memória interna",
+      "Tensão de alimentação instável"
+    ],
+    "resolution": {
+      "immediate_action": "Reiniciar IHM e verificar comunicação com CLP.",
+      "corrective_action": "Substituir tela ou IHM completa, restaurar backup de projeto.",
+      "preventive_action": "Backup mensal das configurações, monitoramento de temperatura do painel.",
+      "estimated_downtime_hours": 4,
+      "requires_specialist": true
+    },
+    "related_failures": ["F006", "F014"],
+    "avg_recurrence_days": 730,
+    "documentation_ref": "MAN-AUT-050"
+  },
+  {
+    "id": "F034",
+    "name": "Falha no Sistema de Pesagem",
+    "category": "Instrumentação",
+    "severity": "Alta",
+    "symptoms": [
+      "Peso lido com erro sistemático",
+      "Oscilação excessiva da leitura",
+      "Sistema não zerando corretamente",
+      "Perda de calibração frequente"
+    ],
+    "probable_causes": [
+      "Célula de carga danificada",
+      "Plataforma com interferência mecânica",
+      "Vibração do ambiente afetando leitura",
+      "Instrumento de pesagem com deriva"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar se plataforma está livre de interferências mecânicas.",
+      "corrective_action": "Recalibrar sistema, substituir célula de carga se necessário.",
+      "preventive_action": "Calibração mensal, isolamento de vibração na plataforma.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F023", "F005"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-INST-030"
+  },
+  {
+    "id": "F035",
+    "name": "Falha no Sistema de Aquecimento por Resistência",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Temperatura do processo não atingindo setpoint",
+      "Resistência sem corrente elétrica",
+      "Sinal de alarme de subtemperatura",
+      "Controlador PID em saída máxima sem efeito"
+    ],
+    "probable_causes": [
+      "Resistência elétrica queimada",
+      "Relé de estado sólido (SSR) com defeito",
+      "Fusível de proteção queimado",
+      "Cabo de alimentação partido"
+    ],
+    "resolution": {
+      "immediate_action": "Medir resistência elétrica do elemento aquecedor com multímetro.",
+      "corrective_action": "Substituir resistência, SSR ou fusível conforme diagnóstico.",
+      "preventive_action": "Verificação semestral da resistência dos elementos, proteção contra picos de tensão.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F025", "F001"],
+    "avg_recurrence_days": 360,
+    "documentation_ref": "MAN-EL-100"
+  },
+  {
+    "id": "F036",
+    "name": "Falha no Acoplamento Mecânico",
+    "category": "Mecânica",
+    "severity": "Média",
+    "symptoms": [
+      "Vibração na transmissão sem causa aparente",
+      "Ruído intermitente de batida",
+      "Desgaste acelerado em rolamentos",
+      "Elemento elástico do acoplamento fragmentado"
+    ],
+    "probable_causes": [
+      "Desalinhamento entre motor e carga",
+      "Fim de vida útil do elemento elástico",
+      "Torque de choque acima do nominal",
+      "Fixação do acoplamento frouxa"
+    ],
+    "resolution": {
+      "immediate_action": "Reduzir carga e verificar ruídos.",
+      "corrective_action": "Substituir elemento elástico do acoplamento, verificar alinhamento.",
+      "preventive_action": "Inspeção semestral do acoplamento, alinhamento após qualquer manutenção no conjunto.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F011", "F004"],
+    "avg_recurrence_days": 365,
+    "documentation_ref": "MAN-MEC-060"
+  },
+  {
+    "id": "F037",
+    "name": "Falha no Controlador de Temperatura PID",
+    "category": "Instrumentação",
+    "severity": "Alta",
+    "symptoms": [
+      "Temperatura oscilando sem controle",
+      "Processo não estabilizando no setpoint",
+      "Display do controlador com erro",
+      "Saída de controle em 0% ou 100% fixo"
+    ],
+    "probable_causes": [
+      "Parâmetros PID descalibrados",
+      "Sensor de entrada com falha",
+      "Controlador com falha interna",
+      "Atuador (SSR/contactor) com defeito"
+    ],
+    "resolution": {
+      "immediate_action": "Checar se sensor está correto e se saída do controlador está operando.",
+      "corrective_action": "Reajustar parâmetros PID ou substituir controlador.",
+      "preventive_action": "Autotuning semestral, backup de parâmetros, verificação do sensor.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F025", "F035"],
+    "avg_recurrence_days": 500,
+    "documentation_ref": "MAN-INST-035"
+  },
+  {
+    "id": "F038",
+    "name": "Falha no Sistema de Etiquetagem / Impressão",
+    "category": "Periféricos",
+    "severity": "Média",
+    "symptoms": [
+      "Etiquetas com impressão apagada ou borrada",
+      "Impressora não comunicando com sistema",
+      "Etiquetas não aderindo ao produto",
+      "Erro de leitura no leitor de código de barras"
+    ],
+    "probable_causes": [
+      "Cabeça de impressão desgastada",
+      "Rolo de borracha endurecido",
+      "Etiqueta com especificação incorreta",
+      "Parâmetros de temperatura/velocidade errados"
+    ],
+    "resolution": {
+      "immediate_action": "Limpar cabeça de impressão e verificar parâmetros.",
+      "corrective_action": "Substituir cabeça de impressão ou rolo, reconfigurar parâmetros.",
+      "preventive_action": "Limpeza semanal da cabeça de impressão, uso de mídia certificada.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": false
+    },
+    "related_failures": ["F029", "F033"],
+    "avg_recurrence_days": 120,
+    "documentation_ref": "MAN-PER-010"
+  },
+  {
+    "id": "F039",
+    "name": "Falha no Sistema de Vácuo",
+    "category": "Pneumática",
+    "severity": "Alta",
+    "symptoms": [
+      "Ventosas sem sucção",
+      "Peças caindo durante transferência",
+      "Vacuostato não atingindo nível mínimo",
+      "Gerador de vácuo aquecendo excessivamente"
+    ],
+    "probable_causes": [
+      "Ventosa desgastada ou com fissura",
+      "Filtro do gerador de vácuo entupido",
+      "Vazamento na tubulação de vácuo",
+      "Gerador de vácuo com desgaste"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar leitura do vacuostato e estado das ventosas.",
+      "corrective_action": "Substituir ventosas, limpar filtro, identificar e corrigir vazamentos.",
+      "preventive_action": "Inspeção mensal das ventosas, substituição preventiva a cada 6 meses.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": false
+    },
+    "related_failures": ["F015", "F016"],
+    "avg_recurrence_days": 150,
+    "documentation_ref": "MAN-PNE-025"
+  },
+  {
+    "id": "F040",
+    "name": "Falha no Transformador de Solda",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Solda com qualidade ruim ou sem fusão",
+      "Corrente de solda abaixo do programado",
+      "Transformador aquecendo excessivamente",
+      "Alarme de falha na fonte de solda"
+    ],
+    "probable_causes": [
+      "Eletrodos desgastados ou sujos",
+      "Bobina primária ou secundária com falha",
+      "Refrigeração da tocha de solda obstruída",
+      "Parâmetros de solda incorretos"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar estado dos eletrodos e parâmetros do processo.",
+      "corrective_action": "Substituir eletrodos, verificar transformador e sistema de resfriamento.",
+      "preventive_action": "Troca de eletrodos conforme desgaste, manutenção preventiva do transformador.",
+      "estimated_downtime_hours": 3,
+      "requires_specialist": true
+    },
+    "related_failures": ["F001", "F009"],
+    "avg_recurrence_days": 90,
+    "documentation_ref": "MAN-EL-110"
+  },
+  {
+    "id": "F041",
+    "name": "Falha no Sistema de Alimentação de Parafusos",
+    "category": "Periféricos",
+    "severity": "Média",
+    "symptoms": [
+      "Parafusos não chegando à cabeça de aperto",
+      "Atolamento frequente na calha",
+      "Sensor de presença não detectando parafuso",
+      "Posicionamento incorreto do parafuso"
+    ],
+    "probable_causes": [
+      "Parafusos misturados ou fora da especificação",
+      "Calha com desgaste ou desalinhamento",
+      "Vibrador do bowl feeder com amplitude incorreta",
+      "Soprador com pressão insuficiente"
+    ],
+    "resolution": {
+      "immediate_action": "Limpar calha e verificar lote de parafusos.",
+      "corrective_action": "Ajustar amplitude do vibrador, verificar calha e soprador.",
+      "preventive_action": "Controle de qualidade dos parafusos no recebimento, limpeza semanal do bowl.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": false
+    },
+    "related_failures": ["F038", "F005"],
+    "avg_recurrence_days": 30,
+    "documentation_ref": "MAN-PER-018"
+  },
+  {
+    "id": "F042",
+    "name": "Falha no Acionamento Pneumático de Garra",
+    "category": "Pneumática",
+    "severity": "Média",
+    "symptoms": [
+      "Garra não abrindo ou fechando completamente",
+      "Força de preensão insuficiente",
+      "Peças caindo durante o transporte",
+      "Sensor de garra fechada não ativando"
+    ],
+    "probable_causes": [
+      "Pressão de operação insuficiente",
+      "Molas de retorno fadigadas",
+      "Vedações internas desgastadas",
+      "Guias da garra com desgaste ou sujeira"
+    ],
+    "resolution": {
+      "immediate_action": "Ajustar pressão reguladora e verificar funcionamento.",
+      "corrective_action": "Substituir kit de vedação ou garra completa se guias danificadas.",
+      "preventive_action": "Lubrificação semestral, inspeção de vedações, limpeza das guias.",
+      "estimated_downtime_hours": 1.5,
+      "requires_specialist": false
+    },
+    "related_failures": ["F022", "F039"],
+    "avg_recurrence_days": 240,
+    "documentation_ref": "MAN-PNE-030"
+  },
+  {
+    "id": "F043",
+    "name": "Falha no Sistema de Detecção de Metal",
+    "category": "Instrumentação",
+    "severity": "Crítica",
+    "symptoms": [
+      "Detector disparando sem presença de metal (falso alarme)",
+      "Detector não identificando contaminante metálico",
+      "Sinal de saída com ruído elétrico",
+      "Equipamento fora da calibração de sensibilidade"
+    ],
+    "probable_causes": [
+      "Interferência eletromagnética externa",
+      "Produto com alta condutividade (efeito produto)",
+      "Detector com componente interno defeituoso",
+      "Calibração desatualizada para o produto atual"
+    ],
+    "resolution": {
+      "immediate_action": "Colocar linha em inspeção manual até restabelecer detecção.",
+      "corrective_action": "Recalibrar detector com amostra do produto, blindar fontes de interferência.",
+      "preventive_action": "Verificação diária com padrões de teste, calibração mensal.",
+      "estimated_downtime_hours": 1,
+      "requires_specialist": true
+    },
+    "related_failures": ["F029", "F005"],
+    "avg_recurrence_days": 180,
+    "documentation_ref": "MAN-INST-040"
+  },
+  {
+    "id": "F044",
+    "name": "Falha no Sistema de Aquecimento por Indução",
+    "category": "Elétrica",
+    "severity": "Alta",
+    "symptoms": [
+      "Peça não atingindo temperatura de aquecimento",
+      "Alarme de corrente do gerador de indução",
+      "Bobina com danos visíveis",
+      "Resfriamento da bobina com vazamento"
+    ],
+    "probable_causes": [
+      "Bobina de indução com curto entre espiras",
+      "Gerador de RF com componente danificado",
+      "Vazamento no circuito de resfriamento da bobina",
+      "Posicionamento incorreto da peça na bobina"
+    ],
+    "resolution": {
+      "immediate_action": "Desligar gerador e inspecionar bobina visualmente.",
+      "corrective_action": "Substituir bobina ou reparar sistema de resfriamento, verificar gerador.",
+      "preventive_action": "Inspeção mensal da bobina e mangueiras de resfriamento.",
+      "estimated_downtime_hours": 5,
+      "requires_specialist": true
+    },
+    "related_failures": ["F035", "F018"],
+    "avg_recurrence_days": 300,
+    "documentation_ref": "MAN-EL-120"
+  },
+  {
+    "id": "F045",
+    "name": "Falha no Sistema de Dosagem de Fluidos",
+    "category": "Hidráulica",
+    "severity": "Alta",
+    "symptoms": [
+      "Volume dosado fora da especificação",
+      "Bomba dosadora sem fluxo",
+      "Vazamento no bico dosador",
+      "Tempo de ciclo de dosagem aumentado"
+    ],
+    "probable_causes": [
+      "Desgaste da bomba dosadora",
+      "Bico dosador entupido ou com desgaste",
+      "Viscosidade do fluido fora do especificado",
+      "Válvula de retenção com defeito"
+    ],
+    "resolution": {
+      "immediate_action": "Verificar volume dosado com recipiente calibrado.",
+      "corrective_action": "Limpar ou substituir bico dosador, verificar bomba e válvulas.",
+      "preventive_action": "Limpeza periódica dos bicos, controle de temperatura do fluido.",
+      "estimated_downtime_hours": 2,
+      "requires_specialist": false
+    },
+    "related_failures": ["F020", "F002"],
+    "avg_recurrence_days": 120,
+    "documentation_ref": "MAN-HID-040"
+  }
+]

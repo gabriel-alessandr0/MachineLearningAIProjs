@@ -1,0 +1,122 @@
+[
+  {
+    "id": "S001",
+    "description": "Superaquecimento / temperatura elevada",
+    "examples": "Motor quente, painel quente, óleo quente, processo não resfriando",
+    "related_failures": ["F001", "F008", "F010", "F014", "F018", "F019", "F024", "F031", "F040"]
+  },
+  {
+    "id": "S002",
+    "description": "Vibração anormal",
+    "examples": "Vibração excessiva na máquina, no eixo, na esteira ou na transmissão",
+    "related_failures": ["F004", "F007", "F011", "F026", "F027", "F036"]
+  },
+  {
+    "id": "S003",
+    "description": "Ruído anormal",
+    "examples": "Ruído metálico, crepitação, batida, estouro, arrasto ou engrenamento estranho",
+    "related_failures": ["F004", "F007", "F008", "F026", "F027", "F031", "F036"]
+  },
+  {
+    "id": "S004",
+    "description": "Queda ou ausência de pressão",
+    "examples": "Sistema hidráulico ou pneumático sem pressão suficiente ou pressão zerando",
+    "related_failures": ["F002", "F008", "F015", "F016", "F020", "F028", "F030", "F039"]
+  },
+  {
+    "id": "S005",
+    "description": "Vazamento de fluido (óleo ou ar)",
+    "examples": "Mancha de óleo no chão, ruído de ar escapando, mangueira vazando",
+    "related_failures": ["F002", "F010", "F016", "F022", "F031", "F044", "F045"]
+  },
+  {
+    "id": "S006",
+    "description": "Atuador sem resposta ou movimento incompleto",
+    "examples": "Cilindro não avança, garra não fecha, válvula não aciona, eixo servo travado",
+    "related_failures": ["F015", "F020", "F021", "F022", "F032", "F039", "F042"]
+  },
+  {
+    "id": "S007",
+    "description": "Alarme ou código de erro no painel / drive",
+    "examples": "Código de erro no inversor, alarme no servo drive, LED de falha aceso",
+    "related_failures": ["F003", "F006", "F017", "F021", "F024", "F033", "F037"]
+  },
+  {
+    "id": "S008",
+    "description": "Leitura incorreta ou ausente de sensor",
+    "examples": "Sensor de posição sem sinal, encoder com erro, temperatura lendo valor absurdo",
+    "related_failures": ["F005", "F013", "F023", "F025", "F034", "F037"]
+  },
+  {
+    "id": "S009",
+    "description": "Motor não parte ou para inesperadamente",
+    "examples": "Motor não liga, para no meio do ciclo, desliga por proteção térmica",
+    "related_failures": ["F001", "F003", "F009", "F019", "F032", "F035"]
+  },
+  {
+    "id": "S010",
+    "description": "Perda de comunicação ou falha de rede",
+    "examples": "CLP sem comunicação, SCADA com timeout, equipamento saindo do automático",
+    "related_failures": ["F006", "F033", "F029"]
+  },
+  {
+    "id": "S011",
+    "description": "Cheiro de queimado ou fumaça",
+    "examples": "Cheiro de verniz ou borracha queimada, fumaça no painel ou motor",
+    "related_failures": ["F001", "F009", "F019", "F032", "F040"]
+  },
+  {
+    "id": "S012",
+    "description": "Processo não atingindo temperatura desejada",
+    "examples": "Temperatura abaixo do setpoint, aquecimento lento, controlador em saída máxima sem efeito",
+    "related_failures": ["F018", "F025", "F035", "F037", "F044"]
+  },
+  {
+    "id": "S013",
+    "description": "Erro de posicionamento ou movimento errático",
+    "examples": "Peça parando em lugar errado, eixo oscilando, encoder com contagem errada",
+    "related_failures": ["F005", "F013", "F021", "F024", "F026", "F027"]
+  },
+  {
+    "id": "S014",
+    "description": "Qualidade do produto fora do padrão",
+    "examples": "Peças rejeitadas, etiqueta apagada, solda fraca, dosagem errada, impressão ruim",
+    "related_failures": ["F029", "F034", "F037", "F038", "F040", "F043", "F045"]
+  },
+  {
+    "id": "S015",
+    "description": "Equipamento reiniciando ou perdendo configuração",
+    "examples": "IHM reiniciando, paletizador reiniciando em queda de energia, perda de receitas",
+    "related_failures": ["F006", "F017", "F033"]
+  },
+  {
+    "id": "S016",
+    "description": "Folga ou desgaste mecânico visível",
+    "examples": "Folga no eixo, acoplamento fragmentado, guia com marcas, correia desgastada",
+    "related_failures": ["F004", "F007", "F011", "F026", "F027", "F031", "F036"]
+  },
+  {
+    "id": "S017",
+    "description": "Compressor ou bomba trabalhando excessivamente",
+    "examples": "Compressor ligando a cada poucos minutos, bomba contínua sem pausa",
+    "related_failures": ["F016", "F028", "F030"]
+  },
+  {
+    "id": "S018",
+    "description": "Falha no sistema de vácuo ou ventosas sem sucção",
+    "examples": "Peças caindo durante transferência, vacuostato abaixo do mínimo",
+    "related_failures": ["F015", "F039", "F042"]
+  },
+  {
+    "id": "S019",
+    "description": "Óleo com aparência anormal",
+    "examples": "Óleo escuro, óleo leitoso, espuma no reservatório, filtros entupindo rápido",
+    "related_failures": ["F008", "F010", "F031"]
+  },
+  {
+    "id": "S020",
+    "description": "Alimentação ou transporte de peças falhando",
+    "examples": "Parafusos não chegando, atolamento na calha, peças caindo, caixas parando erradas",
+    "related_failures": ["F005", "F029", "F038", "F039", "F041", "F042"]
+  }
+]
