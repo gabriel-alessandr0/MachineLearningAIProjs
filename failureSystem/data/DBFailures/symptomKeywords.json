@@ -1,0 +1,102 @@
+{
+  "S001": [
+    "superaquecimento", "temperatura elevada", "temperatura acima", "alta temperatura",
+    "proteção térmica", "desligando por temperatura", "quente", "aquecendo", "thermal",
+    "acima do setpoint", "acima do limite", "acima do normal"
+  ],
+  "S002": [
+    "vibração", "vibração excessiva", "vibração anormal", "trepidação",
+    "vibração na transmissão", "vibração no spindle", "vibração no tambor"
+  ],
+  "S003": [
+    "ruído", "ruído metálico", "ruído de estouro", "ruído rítmico", "ruído de arrasto",
+    "barulho", "estouro", "crepitação", "batida", "tranco", "engrenamento anormal"
+  ],
+  "S004": [
+    "queda de pressão", "sem pressão", "pressão baixa", "pressão abaixo",
+    "ausência de pressão", "pressão zerada", "queda total de pressão",
+    "fluxo de água abaixo", "fluxo abaixo do mínimo", "variação brusca de pressão",
+    "variação de pressão", "fluxo abaixo", "abaixo do mínimo"
+  ],
+  "S005": [
+    "vazamento", "mancha de óleo", "óleo no chão", "óleo na mangueira",
+    "vazamento no cilindro", "vazamento hidráulico", "mangueira vazando",
+    "resfriamento da bobina com vazamento"
+  ],
+  "S006": [
+    "sem resposta ao comando", "não descendo", "não abrindo", "não fechando",
+    "sem acionamento", "não avança", "não responde", "cabeça de aperto sem descida",
+    "cilindro não responde", "pino de indexação não engatando", "não descendo ao comando"
+  ],
+  "S007": [
+    "código de erro", "código e", "alarme", "alarme ativo", "led de falha",
+    "erro no display", "display com erro", "alarme de falha", "alarme no servo",
+    "alarme no cnc", "alarme de sobrecarga", "alarme j", "overload"
+  ],
+  "S008": [
+    "leitura incorreta", "leitura travada", "leitura zerada", "valor incorreto",
+    "valor absurdo", "sensor sem sinal", "sinal instável", "lendo valor incorreto",
+    "pt100", "termopar", "encoder com erro", "contagem errada"
+  ],
+  "S009": [
+    "não parte", "não partindo", "não liga", "para inesperadamente", "parada súbita",
+    "parada no meio", "não inicia", "motor não partindo", "motor não parte"
+  ],
+  "S010": [
+    "sem comunicação", "perda de comunicação", "timeout", "saindo do automático",
+    "não enviando", "perdendo sincronismo", "não comunicando", "erro de rede",
+    "perda de comunicação do cnc"
+  ],
+  "S011": [
+    "cheiro de queimado", "cheiro forte", "fumaça", "verniz queimado",
+    "cheiro de verniz", "borracha queimada", "queimado", "queimada"
+  ],
+  "S012": [
+    "não atingindo temperatura", "subtemperatura", "temperatura de secagem",
+    "não aquecendo", "abaixo do setpoint", "ciclo de secagem inconsistente",
+    "saída máxima sem efeito", "temperatura oscilando", "temperatura fora de controle",
+    "fora de controle"
+  ],
+  "S013": [
+    "erro de posicionamento", "erro de posição", "posição incorreta", "posição errada",
+    "movimento errático", "eixo oscilando", "parando em posição incorreta",
+    "posicionamento crescente", "erro de posição crescente"
+  ],
+  "S014": [
+    "qualidade ruim", "solda fraca", "cordão irregular", "impressão apagada",
+    "impressão borrada", "etiqueta apagada", "dosagem incorreta", "volume incorreto",
+    "volume dosado incorreto", "dosado incorreto", "taxa de rejeição elevada",
+    "taxa alta de rejeição", "taxa de rejeição", "leitura incorreta", "solda ruim",
+    "qualidade de solda caindo", "falso alarme", "falsos alarmes", "impressão ausente",
+    "rejeição errada", "força de prensagem inconsistente", "inconsistente"
+  ],
+  "S015": [
+    "reiniciando", "reinicialização", "perdendo configuração", "perda de receitas",
+    "perda de configuração", "reiniciando em queda de energia",
+    "manchas", "toque lento", "tela com manchas", "toque não respondendo"
+  ],
+  "S016": [
+    "folga", "desgaste", "elemento elástico fragmentado", "fragmentado",
+    "marcas de desgaste", "guia com marcas", "desgaste visível", "correia desgastada",
+    "desgaste do acoplamento", "correia partida", "correia transportadora partida",
+    "partida", "força de prensagem inconsistente", "força inconsistente"
+  ],
+  "S017": [
+    "compressor ligando excessivamente", "compressor ligando a cada",
+    "bomba trabalhando continuamente", "compressor acionando a cada",
+    "bomba contínua"
+  ],
+  "S018": [
+    "ventosas sem sucção", "sucção insuficiente", "peças caindo durante",
+    "vacuostato", "vácuo", "sem vácuo", "gerador de vácuo"
+  ],
+  "S019": [
+    "óleo escuro", "óleo leitoso", "espuma no reservatório", "espuma",
+    "filtros entupindo", "contaminação do óleo", "óleo com espuma"
+  ],
+  "S020": [
+    "atolamento", "parafusos atolando", "calha", "parafusos não chegando",
+    "caixas parando", "peças caindo", "alimentação", "bowl feeder",
+    "não detectando parafuso"
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "last_updated": "2025-01-15",
+  "plant": "Planta Industrial Alpha",
+  "lines": [
+    {
+      "line_id": "L01",
+      "line_name": "Linha de Estamparia",
+      "description": "Linha responsável pelo processo de estampagem de chapas metálicas",
+      "status": "Operacional",
+      "total_failures": 38,
+      "mtbf_days": 12,
+      "last_failure_date": "2025-01-10",
+      "machines": [
+        {
+          "machine_id": "L01-M01",
+          "machine_name": "Prensa Hidráulica 200T",
+          "model": "PHY-200",
+          "manufacturer": "MetalPress Ind.",
+          "installation_year": 2019,
+          "status": "Operacional",
+          "total_failures": 14,
+          "mtbf_days": 16,
+          "last_maintenance": "2024-12-20",
+          "failure_history": [
+            { "record_id": "R001", "failure_id": "F002", "failure_name": "Vazamento Hidráulico", "symptom_reported": "Mancha de óleo no chão e queda de pressão", "date": "2025-01-10", "downtime_hours": 2.5, "resolved_by": "João Silva", "resolution_applied": "Substituição de retentor do cilindro principal", "parts_replaced": ["Retentor 80x100x10", "O-ring kit"], "cost_brl": 320.0 },
+            { "record_id": "R002", "failure_id": "F008", "failure_name": "Falha na Bomba Hidráulica", "symptom_reported": "Ruído excessivo e queda total de pressão", "date": "2024-09-03", "downtime_hours": 7, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição completa da bomba hidráulica", "parts_replaced": ["Bomba Hidráulica PGF-020"], "cost_brl": 4800.0 },
+            { "record_id": "R003", "failure_id": "F002", "failure_name": "Vazamento Hidráulico", "symptom_reported": "Óleo na mangueira de retorno", "date": "2024-05-18", "downtime_hours": 1.5, "resolved_by": "João Silva", "resolution_applied": "Troca de mangueira hidráulica de retorno", "parts_replaced": ["Mangueira 1/2\" x 1.5m"], "cost_brl": 210.0 },
+            { "record_id": "R004", "failure_id": "F020", "failure_name": "Falha na Válvula Hidráulica Direcional", "symptom_reported": "Cilindro de prensagem não descendo ao comando", "date": "2024-03-22", "downtime_hours": 2, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do solenóide da válvula direcional 4/3", "parts_replaced": ["Bobina solenóide 24VDC"], "cost_brl": 380.0 },
+            { "record_id": "R005", "failure_id": "F010", "failure_name": "Contaminação do Óleo Hidráulico", "symptom_reported": "Óleo escuro e filtros entupindo com frequência", "date": "2023-11-14", "downtime_hours": 4, "resolved_by": "João Silva", "resolution_applied": "Troca completa de óleo e filtros", "parts_replaced": ["Óleo HLP-46 200L", "Filtro 10 microns x2"], "cost_brl": 1200.0 },
+            { "record_id": "R006", "failure_id": "F028", "failure_name": "Falha no Acumulador Hidráulico", "symptom_reported": "Variação brusca de pressão durante ciclo", "date": "2023-08-30", "downtime_hours": 2, "resolved_by": "João Silva", "resolution_applied": "Recarga de nitrogênio no acumulador", "parts_replaced": [], "cost_brl": 150.0 }
+          ]
+        },
+        {
+          "machine_id": "L01-M02",
+          "machine_name": "Alimentador Automático de Chapa",
+          "model": "AAC-500",
+          "manufacturer": "AutoFeed Ltda.",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 10,
+          "mtbf_days": 22,
+          "last_maintenance": "2025-01-05",
+          "failure_history": [
+            { "record_id": "R007", "failure_id": "F005", "failure_name": "Falha no Sensor de Posição", "symptom_reported": "Alimentação parando em posição incorreta", "date": "2024-11-22", "downtime_hours": 1.5, "resolved_by": "Ana Rodrigues", "resolution_applied": "Realinhamento do sensor indutivo de avanço", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R008", "failure_id": "F007", "failure_name": "Quebra de Correia", "symptom_reported": "Parada súbita com ruído de estouro", "date": "2024-07-14", "downtime_hours": 2, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição de correia dentada e ajuste de tensão", "parts_replaced": ["Correia HTD 5M-750"], "cost_brl": 185.0 },
+            { "record_id": "R009", "failure_id": "F013", "failure_name": "Falha no Encoder Rotativo", "symptom_reported": "Erro de posição no servo drive do avanço", "date": "2024-04-10", "downtime_hours": 2.5, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do encoder incremental", "parts_replaced": ["Encoder 1024ppr 5V"], "cost_brl": 520.0 },
+            { "record_id": "R010", "failure_id": "F004", "failure_name": "Desgaste de Rolamento", "symptom_reported": "Vibração no rolo de avanço", "date": "2023-12-05", "downtime_hours": 5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição de rolamento do rolo de tração", "parts_replaced": ["Rolamento 6206-2RS x2"], "cost_brl": 280.0 }
+          ]
+        },
+        {
+          "machine_id": "L01-M03",
+          "machine_name": "Transportador de Saída",
+          "model": "CONV-800",
+          "manufacturer": "ConveyBelt S.A.",
+          "installation_year": 2018,
+          "status": "Em Manutenção",
+          "total_failures": 14,
+          "mtbf_days": 18,
+          "last_maintenance": "2025-01-12",
+          "failure_history": [
+            { "record_id": "R011", "failure_id": "F004", "failure_name": "Desgaste de Rolamento", "symptom_reported": "Vibração e ruído metálico no tambor motriz", "date": "2025-01-12", "downtime_hours": 5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do rolamento 6308 do tambor motriz", "parts_replaced": ["Rolamento 6308-2RS"], "cost_brl": 420.0 },
+            { "record_id": "R012", "failure_id": "F007", "failure_name": "Quebra de Correia Transportadora", "symptom_reported": "Correia transportadora partida", "date": "2024-10-01", "downtime_hours": 3, "resolved_by": "João Silva", "resolution_applied": "Emenda de correia com grampo de emergência e pedido de troca", "parts_replaced": ["Grampo de emenda correia"], "cost_brl": 95.0 },
+            { "record_id": "R013", "failure_id": "F001", "failure_name": "Superaquecimento de Motor", "symptom_reported": "Motor da esteira desligando por proteção térmica", "date": "2024-06-15", "downtime_hours": 3, "resolved_by": "Ana Rodrigues", "resolution_applied": "Limpeza das grades de ventilação e troca do capacitor de partida", "parts_replaced": ["Capacitor 40uF 440V"], "cost_brl": 65.0 },
+            { "record_id": "R014", "failure_id": "F011", "failure_name": "Desalinhamento de Eixo", "symptom_reported": "Vibração excessiva na esteira e desgaste do acoplamento", "date": "2024-02-28", "downtime_hours": 4, "resolved_by": "Carlos Menezes", "resolution_applied": "Realinhamento a laser do conjunto motor-redutor", "parts_replaced": ["Elemento elástico acoplamento"], "cost_brl": 340.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "line_id": "L02",
+      "line_name": "Linha de Injeção Plástica",
+      "description": "Linha de moldagem por injeção de componentes plásticos",
+      "status": "Operacional",
+      "total_failures": 52,
+      "mtbf_days": 9,
+      "last_failure_date": "2025-01-08",
+      "machines": [
+        {
+          "machine_id": "L02-M01",
+          "machine_name": "Injetora 350T",
+          "model": "INJ-350",
+          "manufacturer": "PlastiMaq Brasil",
+          "installation_year": 2017,
+          "status": "Operacional",
+          "total_failures": 18,
+          "mtbf_days": 10,
+          "last_maintenance": "2024-12-28",
+          "failure_history": [
+            { "record_id": "R015", "failure_id": "F001", "failure_name": "Superaquecimento de Motor", "symptom_reported": "Desligamento por proteção térmica do motor de plastificação", "date": "2025-01-08", "downtime_hours": 3, "resolved_by": "Ana Rodrigues", "resolution_applied": "Limpeza das grades de ventilação do motor", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R016", "failure_id": "F003", "failure_name": "Falha no Inversor de Frequência", "symptom_reported": "Código E07 no display, motor da bomba não parte", "date": "2024-10-30", "downtime_hours": 5, "resolved_by": "Técnico Externo", "resolution_applied": "Substituição do módulo IGBT do inversor", "parts_replaced": ["Módulo IGBT 75A/600V"], "cost_brl": 2200.0 },
+            { "record_id": "R017", "failure_id": "F002", "failure_name": "Vazamento Hidráulico", "symptom_reported": "Vazamento no cilindro de fechamento do molde", "date": "2024-08-05", "downtime_hours": 2, "resolved_by": "João Silva", "resolution_applied": "Troca de vedações do cilindro de fechamento", "parts_replaced": ["Kit vedação cilindro 120mm"], "cost_brl": 550.0 },
+            { "record_id": "R018", "failure_id": "F035", "failure_name": "Falha no Sistema de Aquecimento por Resistência", "symptom_reported": "Zona 3 do canhão não aquecendo, subtemperatura no setpoint", "date": "2024-06-12", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição da resistência de banda zona 3", "parts_replaced": ["Resistência de Banda 220V 400W"], "cost_brl": 180.0 },
+            { "record_id": "R019", "failure_id": "F025", "failure_name": "Falha no Sensor de Temperatura", "symptom_reported": "Termopar da zona 1 lendo valor incorreto", "date": "2024-04-02", "downtime_hours": 1, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do termopar tipo J zona 1", "parts_replaced": ["Termopar tipo J 6mm"], "cost_brl": 75.0 },
+            { "record_id": "R020", "failure_id": "F037", "failure_name": "Falha no Controlador PID de Temperatura", "symptom_reported": "Temperatura oscilando sem controle na zona 2", "date": "2024-01-20", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Reajuste dos parâmetros PID da zona 2", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R021", "failure_id": "F019", "failure_name": "Bobina de Motor Queimada", "symptom_reported": "Motor hidráulico principal não partindo, cheiro de queimado", "date": "2023-09-18", "downtime_hours": 12, "resolved_by": "Empresa de Rebobinamento", "resolution_applied": "Rebobinamento do motor elétrico 15kW", "parts_replaced": [], "cost_brl": 3200.0 }
+          ]
+        },
+        {
+          "machine_id": "L02-M02",
+          "machine_name": "Robô de Extração de Peças",
+          "model": "RBT-6X",
+          "manufacturer": "RoboTech Automação",
+          "installation_year": 2021,
+          "status": "Operacional",
+          "total_failures": 16,
+          "mtbf_days": 12,
+          "last_maintenance": "2025-01-02",
+          "failure_history": [
+            { "record_id": "R022", "failure_id": "F005", "failure_name": "Falha no Sensor de Posição", "symptom_reported": "Robô parando no meio do ciclo, alarme de posição", "date": "2024-12-18", "downtime_hours": 1.5, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do encoder do eixo Z", "parts_replaced": ["Encoder incremental 1024ppr"], "cost_brl": 680.0 },
+            { "record_id": "R023", "failure_id": "F006", "failure_name": "Falha de Comunicação CLP", "symptom_reported": "Robô sem comunicação com a injetora", "date": "2024-09-11", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do cabo Profinet e atualização de firmware", "parts_replaced": ["Cabo Profinet Cat6 5m"], "cost_brl": 310.0 },
+            { "record_id": "R024", "failure_id": "F039", "failure_name": "Falha no Sistema de Vácuo", "symptom_reported": "Ventosas sem sucção, peças caindo durante extração", "date": "2024-07-08", "downtime_hours": 1, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição de 4 ventosas e limpeza do filtro do gerador", "parts_replaced": ["Ventosa 50mm x4", "Filtro gerador vácuo"], "cost_brl": 220.0 },
+            { "record_id": "R025", "failure_id": "F021", "failure_name": "Falha no Servo Drive", "symptom_reported": "Alarme de seguimento no servo do eixo X, movimento errático", "date": "2024-04-25", "downtime_hours": 3, "resolved_by": "Técnico Externo", "resolution_applied": "Reajuste de ganhos e autotuning do servo drive", "parts_replaced": [], "cost_brl": 600.0 },
+            { "record_id": "R026", "failure_id": "F042", "failure_name": "Falha no Acionamento Pneumático de Garra", "symptom_reported": "Garra não fechando completamente, peças escorregando", "date": "2024-01-30", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do kit de vedação da garra pneumática", "parts_replaced": ["Kit vedação garra PHD"], "cost_brl": 145.0 }
+          ]
+        },
+        {
+          "machine_id": "L02-M03",
+          "machine_name": "Chiller de Resfriamento de Moldes",
+          "model": "CHR-10TR",
+          "manufacturer": "ThermoControl Ind.",
+          "installation_year": 2019,
+          "status": "Operacional",
+          "total_failures": 18,
+          "mtbf_days": 11,
+          "last_maintenance": "2024-11-15",
+          "failure_history": [
+            { "record_id": "R027", "failure_id": "F001", "failure_name": "Superaquecimento de Motor", "symptom_reported": "Temperatura da água acima do setpoint, alarme de alta temperatura", "date": "2024-06-22", "downtime_hours": 2.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Limpeza do condensador e recarga de gás refrigerante", "parts_replaced": [], "cost_brl": 750.0 },
+            { "record_id": "R028", "failure_id": "F018", "failure_name": "Falha no Sistema de Resfriamento a Água", "symptom_reported": "Fluxo de água nos moldes abaixo do mínimo", "date": "2024-04-09", "downtime_hours": 5, "resolved_by": "Carlos Menezes", "resolution_applied": "Limpeza química do trocador de calor do chiller", "parts_replaced": [], "cost_brl": 900.0 },
+            { "record_id": "R029", "failure_id": "F025", "failure_name": "Falha no Sensor de Temperatura", "symptom_reported": "PT100 de saída do chiller com leitura travada", "date": "2024-01-15", "downtime_hours": 1, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do PT100 e conector", "parts_replaced": ["PT100 classe A 1/4\" NPT"], "cost_brl": 130.0 }
+          ]
+        },
+        {
+          "machine_id": "L02-M04",
+          "machine_name": "Secador de Resina",
+          "model": "SEC-80KG",
+          "manufacturer": "DryStar Equip.",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 12,
+          "mtbf_days": 20,
+          "last_maintenance": "2024-12-10",
+          "failure_history": [
+            { "record_id": "R030", "failure_id": "F035", "failure_name": "Falha no Sistema de Aquecimento por Resistência", "symptom_reported": "Secador não atingindo temperatura de secagem", "date": "2024-11-28", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição da resistência elétrica de 2kW", "parts_replaced": ["Resistência tubular 2kW 220V"], "cost_brl": 240.0 },
+            { "record_id": "R031", "failure_id": "F037", "failure_name": "Falha no Controlador PID", "symptom_reported": "Temperatura oscilando muito, ciclo de secagem inconsistente", "date": "2024-08-14", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do controlador PID da câmara de secagem", "parts_replaced": ["Controlador PID Autonics TC4S"], "cost_brl": 320.0 },
+            { "record_id": "R032", "failure_id": "F016", "failure_name": "Vazamento de Ar Comprimido", "symptom_reported": "Compressor ligando excessivamente, ruído de vazamento no secador", "date": "2024-05-20", "downtime_hours": 1, "resolved_by": "João Silva", "resolution_applied": "Substituição de mangueira e conexão T na entrada do soprador", "parts_replaced": ["Mangueira 6mm x 0.5m", "Conexão T 6mm"], "cost_brl": 35.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "line_id": "L03",
+      "line_name": "Linha de Montagem Final",
+      "description": "Linha de montagem e controle de qualidade do produto acabado",
+      "status": "Operacional",
+      "total_failures": 29,
+      "mtbf_days": 15,
+      "last_failure_date": "2024-12-29",
+      "machines": [
+        {
+          "machine_id": "L03-M01",
+          "machine_name": "Esteira de Montagem Motorizada",
+          "model": "EST-MOT-12",
+          "manufacturer": "ConveyBelt S.A.",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 9,
+          "mtbf_days": 25,
+          "last_maintenance": "2024-12-10",
+          "failure_history": [
+            { "record_id": "R033", "failure_id": "F007", "failure_name": "Quebra de Correia", "symptom_reported": "Correia transportadora partida", "date": "2024-12-29", "downtime_hours": 2, "resolved_by": "João Silva", "resolution_applied": "Substituição da correia transportadora e alinhamento dos tambores", "parts_replaced": ["Correia EP200/3 500mm"], "cost_brl": 890.0 },
+            { "record_id": "R034", "failure_id": "F004", "failure_name": "Desgaste de Rolamento", "symptom_reported": "Vibração no tambor de retorno, ruído rítmico", "date": "2024-08-20", "downtime_hours": 4, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do rolamento do tambor de retorno", "parts_replaced": ["Rolamento 6206-2RS x2"], "cost_brl": 280.0 },
+            { "record_id": "R035", "failure_id": "F036", "failure_name": "Falha no Acoplamento Mecânico", "symptom_reported": "Vibração na transmissão, elemento elástico fragmentado", "date": "2024-05-11", "downtime_hours": 2, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do elemento elástico do acoplamento e alinhamento", "parts_replaced": ["Elemento elástico acoplamento 38N"], "cost_brl": 175.0 }
+          ]
+        },
+        {
+          "machine_id": "L03-M02",
+          "machine_name": "Parafusadeira Automática",
+          "model": "PAF-AUTO-4X",
+          "manufacturer": "AutoFeed Ltda.",
+          "installation_year": 2022,
+          "status": "Operacional",
+          "total_failures": 8,
+          "mtbf_days": 30,
+          "last_maintenance": "2025-01-07",
+          "failure_history": [
+            { "record_id": "R036", "failure_id": "F005", "failure_name": "Falha no Sensor de Posição", "symptom_reported": "Cabeça de parafusadeira não descendo na posição correta", "date": "2024-11-05", "downtime_hours": 1, "resolved_by": "Ana Rodrigues", "resolution_applied": "Ajuste de sensibilidade do sensor de curso", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R037", "failure_id": "F041", "failure_name": "Falha no Sistema de Alimentação de Parafusos", "symptom_reported": "Parafusos atolando na calha com frequência", "date": "2024-09-17", "downtime_hours": 1, "resolved_by": "Carlos Menezes", "resolution_applied": "Ajuste da amplitude do vibrador e limpeza da calha", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R038", "failure_id": "F015", "failure_name": "Falha na Válvula Pneumática", "symptom_reported": "Cabeça de aperto sem descida ao comando", "date": "2024-07-23", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição da bobina da válvula 5/2 de acionamento", "parts_replaced": ["Bobina solenóide 24VDC Festo"], "cost_brl": 190.0 }
+          ]
+        },
+        {
+          "machine_id": "L03-M03",
+          "machine_name": "Sistema de Visão CCD",
+          "model": "VIS-CCD-8MP",
+          "manufacturer": "VisionTech S.A.",
+          "installation_year": 2023,
+          "status": "Operacional",
+          "total_failures": 5,
+          "mtbf_days": 45,
+          "last_maintenance": "2025-01-03",
+          "failure_history": [
+            { "record_id": "R039", "failure_id": "F006", "failure_name": "Falha de Comunicação CLP", "symptom_reported": "Sistema de visão não enviando OK/NOK para o CLP", "date": "2024-10-14", "downtime_hours": 1.5, "resolved_by": "Ana Rodrigues", "resolution_applied": "Correção de IP e reinicialização da interface OPC-UA", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R040", "failure_id": "F029", "failure_name": "Falha no Sistema de Visão Industrial", "symptom_reported": "Taxa de rejeição elevada por leitura incorreta", "date": "2024-07-30", "downtime_hours": 2, "resolved_by": "Técnico VisionTech", "resolution_applied": "Recalibração completa e ajuste de iluminação", "parts_replaced": ["Lâmpada LED ring light"], "cost_brl": 450.0 }
+          ]
+        },
+        {
+          "machine_id": "L03-M04",
+          "machine_name": "Detector de Metais",
+          "model": "DM-400-AP",
+          "manufacturer": "SafeDetect Ind.",
+          "installation_year": 2021,
+          "status": "Operacional",
+          "total_failures": 7,
+          "mtbf_days": 35,
+          "last_maintenance": "2024-11-20",
+          "failure_history": [
+            { "record_id": "R041", "failure_id": "F043", "failure_name": "Falha no Sistema de Detecção de Metal", "symptom_reported": "Falsos alarmes frequentes sem presença de metal", "date": "2024-12-05", "downtime_hours": 1, "resolved_by": "Ana Rodrigues", "resolution_applied": "Recalibração com amostra do produto e ajuste de sensibilidade", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R042", "failure_id": "F006", "failure_name": "Falha de Comunicação CLP", "symptom_reported": "Detector sem comunicação com sistema SCADA", "date": "2024-08-18", "downtime_hours": 1.5, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do cabo de comunicação serial RS-485", "parts_replaced": ["Cabo RS-485 3m"], "cost_brl": 55.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "line_id": "L04",
+      "line_name": "Linha de Usinagem CNC",
+      "description": "Linha de usinagem com centros de usinagem e torneamento CNC",
+      "status": "Operacional",
+      "total_failures": 44,
+      "mtbf_days": 10,
+      "last_failure_date": "2025-01-13",
+      "machines": [
+        {
+          "machine_id": "L04-M01",
+          "machine_name": "Centro de Usinagem VMC-850",
+          "model": "VMC-850",
+          "manufacturer": "MachTool S.A.",
+          "installation_year": 2018,
+          "status": "Operacional",
+          "total_failures": 20,
+          "mtbf_days": 8,
+          "last_maintenance": "2025-01-13",
+          "failure_history": [
+            { "record_id": "R043", "failure_id": "F027", "failure_name": "Falha no Fuso de Esferas", "symptom_reported": "Erro de posicionamento crescente no eixo X", "date": "2025-01-13", "downtime_hours": 8, "resolved_by": "Técnico MachTool", "resolution_applied": "Substituição do conjunto fuso de esferas do eixo X", "parts_replaced": ["Fuso esferas 32x10 R/R NSK"], "cost_brl": 8500.0 },
+            { "record_id": "R044", "failure_id": "F026", "failure_name": "Travamento de Guia Linear", "symptom_reported": "Resistência no movimento do eixo Y, ruído de arrasto", "date": "2024-11-08", "downtime_hours": 4, "resolved_by": "Carlos Menezes", "resolution_applied": "Limpeza e lubrificação das guias lineares do eixo Y", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R045", "failure_id": "F013", "failure_name": "Falha no Encoder Rotativo", "symptom_reported": "Erro de posição no eixo A, alarme no CNC", "date": "2024-08-22", "downtime_hours": 2.5, "resolved_by": "Técnico MachTool", "resolution_applied": "Substituição do encoder absoluto do eixo A", "parts_replaced": ["Encoder absoluto 4096ppr"], "cost_brl": 1800.0 },
+            { "record_id": "R046", "failure_id": "F012", "failure_name": "Falha no Sistema de Lubrificação", "symptom_reported": "Alarme de lubrificação, guias sem óleo detectado", "date": "2024-06-17", "downtime_hours": 3, "resolved_by": "Carlos Menezes", "resolution_applied": "Desobstrução da linha de lubrificação e recarga de reservatório", "parts_replaced": ["Óleo Vactra 2 1L"], "cost_brl": 95.0 },
+            { "record_id": "R047", "failure_id": "F018", "failure_name": "Falha no Sistema de Resfriamento", "symptom_reported": "Temperatura do spindle acima do limite, alarme ativo", "date": "2024-03-10", "downtime_hours": 5, "resolved_by": "Carlos Menezes", "resolution_applied": "Troca do fluido de resfriamento e limpeza do trocador", "parts_replaced": ["Fluido refrigerante sintético 20L"], "cost_brl": 380.0 },
+            { "record_id": "R048", "failure_id": "F006", "failure_name": "Falha de Comunicação CLP", "symptom_reported": "Perda de comunicação do CNC com o CLP da linha", "date": "2023-12-19", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição do módulo de comunicação Ethernet do CNC", "parts_replaced": ["Módulo Ethernet CNC"], "cost_brl": 2100.0 }
+          ]
+        },
+        {
+          "machine_id": "L04-M02",
+          "machine_name": "Torno CNC TL-200",
+          "model": "TL-200",
+          "manufacturer": "TornMax Ind.",
+          "installation_year": 2019,
+          "status": "Operacional",
+          "total_failures": 15,
+          "mtbf_days": 12,
+          "last_maintenance": "2024-12-30",
+          "failure_history": [
+            { "record_id": "R049", "failure_id": "F024", "failure_name": "Falha no Servo Motor", "symptom_reported": "Alarme de sobrecorrente no servo do eixo C", "date": "2024-12-02", "downtime_hours": 6, "resolved_by": "Técnico TornMax", "resolution_applied": "Substituição do servo motor do eixo C", "parts_replaced": ["Servo motor Mitsubishi HC-MFS73"], "cost_brl": 5400.0 },
+            { "record_id": "R050", "failure_id": "F004", "failure_name": "Desgaste de Rolamento", "symptom_reported": "Vibração no spindle em altas rotações", "date": "2024-09-14", "downtime_hours": 5, "resolved_by": "Técnico TornMax", "resolution_applied": "Substituição dos rolamentos angulares do spindle", "parts_replaced": ["Rolamento angular 7206 BEP x2"], "cost_brl": 1200.0 },
+            { "record_id": "R051", "failure_id": "F045", "failure_name": "Falha no Sistema de Dosagem de Fluidos", "symptom_reported": "Volume de fluido de corte dosado incorreto", "date": "2024-07-01", "downtime_hours": 2, "resolved_by": "Carlos Menezes", "resolution_applied": "Limpeza do bico dosador e regulagem da bomba", "parts_replaced": [], "cost_brl": 0.0 }
+          ]
+        },
+        {
+          "machine_id": "L04-M03",
+          "machine_name": "Máquina de Lavagem de Peças",
+          "model": "LAV-600",
+          "manufacturer": "CleanTech Ind.",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 9,
+          "mtbf_days": 22,
+          "last_maintenance": "2024-11-25",
+          "failure_history": [
+            { "record_id": "R052", "failure_id": "F001", "failure_name": "Superaquecimento de Motor", "symptom_reported": "Motor da bomba de lavagem desligando por temperatura", "date": "2024-10-28", "downtime_hours": 3, "resolved_by": "João Silva", "resolution_applied": "Substituição do motor da bomba de lavagem", "parts_replaced": ["Motor 3kW B3 IP55"], "cost_brl": 1100.0 },
+            { "record_id": "R053", "failure_id": "F018", "failure_name": "Falha no Sistema de Resfriamento a Água", "symptom_reported": "Temperatura do tanque de lavagem fora de controle", "date": "2024-07-22", "downtime_hours": 4, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição da resistência de aquecimento do tanque", "parts_replaced": ["Resistência imersão 4kW"], "cost_brl": 320.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "line_id": "L05",
+      "line_name": "Linha de Soldagem Robotizada",
+      "description": "Linha com robôs de soldagem MIG/TIG e solda a ponto",
+      "status": "Operacional",
+      "total_failures": 35,
+      "mtbf_days": 11,
+      "last_failure_date": "2025-01-11",
+      "machines": [
+        {
+          "machine_id": "L05-M01",
+          "machine_name": "Robô de Solda MIG ABB IRB-1600",
+          "model": "IRB-1600",
+          "manufacturer": "ABB Robotics",
+          "installation_year": 2019,
+          "status": "Operacional",
+          "total_failures": 14,
+          "mtbf_days": 13,
+          "last_maintenance": "2025-01-11",
+          "failure_history": [
+            { "record_id": "R054", "failure_id": "F021", "failure_name": "Falha no Servo Drive", "symptom_reported": "Alarme J3 overload, robô parando no meio da trajetória", "date": "2025-01-11", "downtime_hours": 3, "resolved_by": "Técnico ABB", "resolution_applied": "Substituição do servo drive do eixo J3", "parts_replaced": ["Servo drive ABB DSQC661"], "cost_brl": 7200.0 },
+            { "record_id": "R055", "failure_id": "F040", "failure_name": "Falha no Transformador de Solda", "symptom_reported": "Qualidade de solda ruim, cordão irregular", "date": "2024-11-19", "downtime_hours": 3, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição dos eletrodos e limpeza do tocha", "parts_replaced": ["Eletrodo contato M6 x10", "Bico difusor x5"], "cost_brl": 85.0 },
+            { "record_id": "R056", "failure_id": "F006", "failure_name": "Falha de Comunicação CLP", "symptom_reported": "Robô perdendo sincronismo com mesa giratória", "date": "2024-09-03", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Reconfigurando parâmetros de rede DeviceNet", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R057", "failure_id": "F013", "failure_name": "Falha no Encoder Rotativo", "symptom_reported": "Erro de posição no eixo J1 após colisão leve", "date": "2024-06-27", "downtime_hours": 2.5, "resolved_by": "Técnico ABB", "resolution_applied": "Substituição e masterização do encoder do eixo J1", "parts_replaced": ["Encoder ABB J1 3HAC17484"], "cost_brl": 2800.0 }
+          ]
+        },
+        {
+          "machine_id": "L05-M02",
+          "machine_name": "Máquina de Solda a Ponto",
+          "model": "SP-120KVA",
+          "manufacturer": "WeldMax Brasil",
+          "installation_year": 2017,
+          "status": "Operacional",
+          "total_failures": 12,
+          "mtbf_days": 15,
+          "last_maintenance": "2024-12-15",
+          "failure_history": [
+            { "record_id": "R058", "failure_id": "F040", "failure_name": "Falha no Transformador de Solda", "symptom_reported": "Corrente de solda abaixo do programado, solda fraca", "date": "2024-12-10", "downtime_hours": 3, "resolved_by": "Técnico WeldMax", "resolution_applied": "Troca dos eletrodos de cobre e ajuste da força pneumática", "parts_replaced": ["Eletrodo cobre Cr/Cu 16mm x2"], "cost_brl": 320.0 },
+            { "record_id": "R059", "failure_id": "F018", "failure_name": "Falha no Sistema de Resfriamento a Água", "symptom_reported": "Eletrodos superaquecendo, qualidade de solda caindo", "date": "2024-08-29", "downtime_hours": 4, "resolved_by": "Carlos Menezes", "resolution_applied": "Desobstrução das mangueiras de resfriamento dos eletrodos", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R060", "failure_id": "F022", "failure_name": "Falha no Cilindro Pneumático", "symptom_reported": "Força de prensagem dos eletrodos inconsistente", "date": "2024-05-14", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do kit de vedação do cilindro de prensagem", "parts_replaced": ["Kit vedação cilindro 80mm"], "cost_brl": 195.0 }
+          ]
+        },
+        {
+          "machine_id": "L05-M03",
+          "machine_name": "Mesa Giratória Indexada",
+          "model": "MGI-4P",
+          "manufacturer": "RotaFix S.A.",
+          "installation_year": 2019,
+          "status": "Operacional",
+          "total_failures": 9,
+          "mtbf_days": 20,
+          "last_maintenance": "2024-12-05",
+          "failure_history": [
+            { "record_id": "R061", "failure_id": "F031", "failure_name": "Falha no Redutor", "symptom_reported": "Ruído de engrenamento anormal e folga na mesa", "date": "2024-11-01", "downtime_hours": 8, "resolved_by": "Técnico RotaFix", "resolution_applied": "Revisão completa do redutor indexador e troca de rolamentos", "parts_replaced": ["Rolamento 6309 x2", "Óleo Mobil 320"], "cost_brl": 2100.0 },
+            { "record_id": "R062", "failure_id": "F015", "failure_name": "Falha na Válvula Pneumática", "symptom_reported": "Pino de indexação não engatando corretamente", "date": "2024-07-16", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição da válvula pneumática do cilindro de pino", "parts_replaced": ["Válvula 5/2 Festo MFH-5-1/8"], "cost_brl": 280.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "line_id": "L06",
+      "line_name": "Linha de Embalagem e Paletização",
+      "description": "Linha final de embalagem, rotulagem e paletização automatizada",
+      "status": "Operacional",
+      "total_failures": 41,
+      "mtbf_days": 8,
+      "last_failure_date": "2025-01-14",
+      "machines": [
+        {
+          "machine_id": "L06-M01",
+          "machine_name": "Encaixotadora Automática",
+          "model": "ENC-AUTO-300",
+          "manufacturer": "PackBox Ind.",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 16,
+          "mtbf_days": 10,
+          "last_maintenance": "2025-01-14",
+          "failure_history": [
+            { "record_id": "R063", "failure_id": "F015", "failure_name": "Falha na Válvula Pneumática", "symptom_reported": "Ventosa de pega de caixa sem acionamento", "date": "2025-01-14", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição da bobina da válvula de vácuo das ventosas", "parts_replaced": ["Bobina solenóide 24V"], "cost_brl": 95.0 },
+            { "record_id": "R064", "failure_id": "F039", "failure_name": "Falha no Sistema de Vácuo", "symptom_reported": "Caixas caindo durante transferência por sucção insuficiente", "date": "2024-11-27", "downtime_hours": 1, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição das ventosas e filtro do gerador de vácuo", "parts_replaced": ["Ventosa 80mm x6", "Filtro vácuo"], "cost_brl": 280.0 },
+            { "record_id": "R065", "failure_id": "F005", "failure_name": "Falha no Sensor de Posição", "symptom_reported": "Caixas parando em posição errada, alarme no CLP", "date": "2024-10-03", "downtime_hours": 1, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição de sensor fotoelétrico de presença de caixa", "parts_replaced": ["Sensor fotoelétrico Sick WL100"], "cost_brl": 390.0 },
+            { "record_id": "R066", "failure_id": "F007", "failure_name": "Quebra de Correia", "symptom_reported": "Correia de entrada de caixas partida", "date": "2024-08-12", "downtime_hours": 2, "resolved_by": "João Silva", "resolution_applied": "Substituição da correia de entrada de caixas", "parts_replaced": ["Correia dentada T5-750"], "cost_brl": 145.0 },
+            { "record_id": "R067", "failure_id": "F033", "failure_name": "Falha na IHM", "symptom_reported": "Tela da IHM com manchas e toque lento", "date": "2024-05-28", "downtime_hours": 4, "resolved_by": "Técnico PackBox", "resolution_applied": "Substituição da IHM completa e restauração de backup", "parts_replaced": ["IHM Siemens KTP700 Basic"], "cost_brl": 3200.0 }
+          ]
+        },
+        {
+          "machine_id": "L06-M02",
+          "machine_name": "Rotuladora Automática",
+          "model": "ROT-400-L",
+          "manufacturer": "LabelTech S.A.",
+          "installation_year": 2021,
+          "status": "Operacional",
+          "total_failures": 14,
+          "mtbf_days": 12,
+          "last_maintenance": "2024-12-20",
+          "failure_history": [
+            { "record_id": "R068", "failure_id": "F038", "failure_name": "Falha no Sistema de Etiquetagem", "symptom_reported": "Etiquetas com impressão apagada nos últimos 30mm", "date": "2024-12-01", "downtime_hours": 1, "resolved_by": "Carlos Menezes", "resolution_applied": "Limpeza e ajuste de pressão da cabeça de impressão", "parts_replaced": [], "cost_brl": 0.0 },
+            { "record_id": "R069", "failure_id": "F029", "failure_name": "Falha no Sistema de Visão Industrial", "symptom_reported": "Câmera de verificação de rótulo com taxa alta de rejeição errada", "date": "2024-10-07", "downtime_hours": 2, "resolved_by": "Técnico LabelTech", "resolution_applied": "Recalibração da câmera de inspeção de rótulos", "parts_replaced": [], "cost_brl": 500.0 },
+            { "record_id": "R070", "failure_id": "F038", "failure_name": "Falha no Sistema de Etiquetagem", "symptom_reported": "Cabeça de impressão queimada, impressão ausente", "date": "2024-07-04", "downtime_hours": 1, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição da cabeça de impressão térmica", "parts_replaced": ["Cabeça impressão 300dpi 4\""], "cost_brl": 1800.0 }
+          ]
+        },
+        {
+          "machine_id": "L06-M03",
+          "machine_name": "Paletizador Robótico",
+          "model": "PAL-ROB-4",
+          "manufacturer": "RoboTech Automação",
+          "installation_year": 2020,
+          "status": "Operacional",
+          "total_failures": 11,
+          "mtbf_days": 18,
+          "last_maintenance": "2025-01-08",
+          "failure_history": [
+            { "record_id": "R071", "failure_id": "F042", "failure_name": "Falha no Acionamento Pneumático de Garra", "symptom_reported": "Garra do paletizador não fechando sob carga pesada", "date": "2025-01-02", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Regulagem da pressão e troca do retentor do cilindro de garra", "parts_replaced": ["Retentor 50mm"], "cost_brl": 85.0 },
+            { "record_id": "R072", "failure_id": "F021", "failure_name": "Falha no Servo Drive", "symptom_reported": "Alarme de sobrecarga no servo do eixo Z do paletizador", "date": "2024-10-29", "downtime_hours": 3, "resolved_by": "Técnico RoboTech", "resolution_applied": "Ajuste de parâmetros de torque e lubrificação das guias", "parts_replaced": [], "cost_brl": 600.0 },
+            { "record_id": "R073", "failure_id": "F017", "failure_name": "Falha no No-break UPS", "symptom_reported": "Paletizador reiniciando durante queda de energia", "date": "2024-08-06", "downtime_hours": 2, "resolved_by": "Ana Rodrigues", "resolution_applied": "Substituição das baterias do no-break do controlador", "parts_replaced": ["Bateria selada 12V 7Ah x4"], "cost_brl": 440.0 }
+          ]
+        },
+        {
+          "machine_id": "L06-M04",
+          "machine_name": "Seladora de Caixas",
+          "model": "SEL-50",
+          "manufacturer": "PackBox Ind.",
+          "installation_year": 2022,
+          "status": "Operacional",
+          "total_failures": 8,
+          "mtbf_days": 22,
+          "last_maintenance": "2024-12-28",
+          "failure_history": [
+            { "record_id": "R074", "failure_id": "F016", "failure_name": "Vazamento de Ar Comprimido", "symptom_reported": "Compressor acionando a cada 3 minutos, ruído de vazamento na seladora", "date": "2024-11-15", "downtime_hours": 1, "resolved_by": "João Silva", "resolution_applied": "Substituição da conexão rápida de entrada de ar da seladora", "parts_replaced": ["Conexão rápida 1/4\" BSP"], "cost_brl": 25.0 },
+            { "record_id": "R075", "failure_id": "F022", "failure_name": "Falha no Cilindro Pneumático", "symptom_reported": "Cabeça de prensagem da fita não descendo completamente", "date": "2024-09-22", "downtime_hours": 1.5, "resolved_by": "Carlos Menezes", "resolution_applied": "Substituição do cilindro pneumático da cabeça de selagem", "parts_replaced": ["Cilindro SMC CDM2B20-100"], "cost_brl": 280.0 }
+          ]
+        }
+      ]
+    }
+  ]
+}
